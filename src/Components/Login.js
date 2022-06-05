@@ -8,7 +8,7 @@ import Input from "./Input"
 import Logo from "../Images/Driven+.png"
 
 export default function Login(){
-    const {user, setUser} = useContext(UserContext)
+    const {user, setUser, setPlanData} = useContext(UserContext)
     const [formData, setFormData] = useState({
         email: '',
         password: ''
@@ -23,14 +23,13 @@ export default function Login(){
         promise.then(response => {
             setUser(response.data);
             if(response.data.membership){
+                setPlanData(response.data.membership)
                 navigate('/home');
             }else{
                 navigate('/subscriptions');
             }
         });
-        promise.catch(error=> {console.log(error.response);
-        alert("Email ou senha incorretos!");
-        });
+        promise.catch(error=> {alert("Email ou senha incorretos!")});
     }
 
     function inputChange(e){
@@ -45,7 +44,7 @@ export default function Login(){
                 <Input formData={formData.password} inputName={"password"} inputChange={inputChange} placeholder={"Senha"}/>
                 <Button type={'submit'}>ENTRAR</Button>
             </form>
-            <Link style={{textDecoration: "none", color: "#52B6FF"}} to={`/sign-up`}><h1>Não possui uma conta? Cadastre-se</h1></Link>
+            <Link style={{color: "#52B6FF"}} to={`/sign-up`}><h1>Não possui uma conta? Cadastre-se</h1></Link>
         </Container>
     )
 }

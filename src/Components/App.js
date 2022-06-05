@@ -12,9 +12,10 @@ import Users from "./Users";
 
 export default function App(){
     const [user, setUser] = useState("")
+    const [planData, setPlanData] = useState("");
 
     return (
-    <UserContext.Provider value={{user, setUser}}>
+    <UserContext.Provider value={{user, setUser, planData, setPlanData}}>
         <BrowserRouter>
             <Routes>
                 <Route path="/" element={<Login/>}/>

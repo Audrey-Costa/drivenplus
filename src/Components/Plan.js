@@ -12,9 +12,8 @@ import {HiOutlineClipboardList} from 'react-icons/hi'
 export default function Plan(){
     const navigate = useNavigate();
     const [data, setData] = useState("");
-    const [cardData,setCardData] = useState("");
     const [modal, setModal] = useState(false);
-    const {user} = useContext(UserContext);
+    const {user, setPlanData} = useContext(UserContext);
     const {ID_DO_PLANO} = useParams();
     const planId = Number(ID_DO_PLANO);
     const [formData, setFormData] = useState({
@@ -55,13 +54,15 @@ export default function Plan(){
         })
 
         promise.then(response => {
-            setCardData(response.data)
+            setPlanData(response.data.membership)
             navigate('/home')
         })
 
         promise.catch(error => {
-            console.log(error.response)
-            alert(error.response)
+            if(error.response.status === 422){
+            alert("Dados inválidos, confira as informações, e tente novamente.")
+            modalToggle()
+            }
         })
     }
 

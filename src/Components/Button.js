@@ -19,4 +19,5 @@ const BUTTON = styled.button`
     line-height: 16px;
     text-align: center;
     color: #FFFFFF;
+    cursor: pointer;
 `

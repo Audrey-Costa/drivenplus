@@ -21,10 +21,12 @@ export default function Register(){
         const promise = axios.post('https://mock-api.driven.com.br/api/v4/driven-plus/auth/sign-up', {...formData})
 
 
-        promise.then(response => console.log(response));
-        promise.catch(error => console.log(error.response))
-
-        navigate('/')
+        promise.then(response => navigate('/'));
+        promise.catch(error => {
+            if(error.response.status === 409){
+                alert("E-mail já cadastrado!")
+            }
+        })
     }
 
     function inputChange(e){
