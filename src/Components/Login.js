@@ -22,8 +22,7 @@ export default function Login(){
 
         promise.then(response => {
             setUser(response.data);
-            console.log(response.data, user.membership, user.membership===null)
-            if(user.membership){
+            if(response.data.membership){
                 navigate('/home');
             }else{
                 navigate('/subscriptions');
