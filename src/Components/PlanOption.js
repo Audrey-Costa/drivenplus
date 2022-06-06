@@ -11,8 +11,8 @@ export default function PlanOption({image, price}){
 }
 
 const Container = styled.div`
-    width: 77vw;
-    height:27vh;
+    width: 290px;
+    height:180px;
     display: flex;
     background: #0E0E13;
     border: 3px solid #7E7E7E;
@@ -28,15 +28,15 @@ const Container = styled.div`
     }
 
     img{
-        width: 30vw;
-        height: 14vh;
+        width: 110px;
+        height: 90px;
     }
     
     h1{ 
         font-family: 'Roboto';
         font-style: normal;
         font-weight: 700;
-        font-size: 7vw;
+        font-size: 14px;
         line-height: 28px;
         color: #FFFFFF;
     }

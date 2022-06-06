@@ -76,7 +76,6 @@ const Container = styled.div`
 `
 
 const IMG = styled.img`
-    width: 60vw;
     margin-top: 68px;
     margin-bottom: 32px;
 `

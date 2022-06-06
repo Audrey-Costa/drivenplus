@@ -116,8 +116,7 @@ export default function Plan(){
 
 const Container = styled.div`
     width: 100%;
-    height: 90%;
-    margin-top: 20%;
+    height: 100%;
     background-color: #0E0E13;
     display: flex;
     flex-direction: column;
@@ -127,19 +126,19 @@ const Container = styled.div`
     > svg{
         position: absolute;
         font-size: 40px;
-        top: 10px;
+        top: 30px;
         left: 30px;
         color: #FFFFFF
 
     }
 
     img{
-        height: 14.2vh;
+        height: 55px;
         margin-bottom: 12px;
     }
     
     > div{
-        width: 80vw;
+        width: 300px;
         margin-bottom: 12px;
         display: flex;
         flex-direction: column;
@@ -197,8 +196,8 @@ const Container = styled.div`
         }
 
         div > input{
-            width: 37vw;
-            margin: 1.4vw;
+            width: 140px;
+            margin: 5px;
         }
     }
 `
@@ -222,8 +221,8 @@ const Modal = styled.span`
     }
 
     > div{
-        width: 66vw;
-        height: 31vh;
+        width: 250px;
+        height: 210px;
         background-color: #FFFFFF;
         border-radius: 12px;
         display: flex;
@@ -233,7 +232,7 @@ const Modal = styled.span`
     }
 
     p{
-        margin-top: 3vh;
+        margin-top: 30px;
         font-family: 'Roboto';
         font-style: normal;
         font-weight: 700;
@@ -247,12 +246,10 @@ const Modal = styled.span`
         display: flex;
         justify-content: space-between;
         align-items: center;
-        margin-top: 3.8vh;
     }
 
     button{
-        width: 25vw;
-        height: 7.8vh;
+        width: 95px;
         margin: 10px 7px;
         border-radius: 8px;
     }

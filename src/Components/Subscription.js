@@ -42,9 +42,9 @@ const Container = styled.div`
         font-family: 'Roboto';
         font-style: normal;
         font-weight: 700;
-        font-size: 8vw;
-        line-height: 20vw;
+        font-size: 32px;
+        line-height: 38px;
         color: #FFFFFF;
-        margin-bottom: 2vw;
+        margin-bottom: 24px;
     }
 `

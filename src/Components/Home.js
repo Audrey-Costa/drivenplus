@@ -68,7 +68,7 @@ const Container = styled.div`
     }
 
     h1{
-        margin-bottom: 7.5vw;
+        margin-bottom: 28px;
         font-family: 'Roboto';
         font-style: normal;
         font-weight: 700;
