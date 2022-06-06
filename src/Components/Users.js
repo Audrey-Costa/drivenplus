@@ -58,6 +58,10 @@ const Container = styled.div`
         right: 30px;
     }
 
+    form{
+        margin-top: 80px;
+    }
+
     input{
         background-color: #EBEBEB;
     }

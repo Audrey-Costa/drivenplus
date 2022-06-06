@@ -7,8 +7,6 @@ export default function Button(props){
 const BUTTON = styled.button`
     width: 83.7vw;
     height: 50px;
-    margin-top: 8px;
-    margin-bottom: 25px;
     background: #FF4791;
     border-radius: 8px;
     border: none;

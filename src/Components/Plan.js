@@ -116,7 +116,8 @@ export default function Plan(){
 
 const Container = styled.div`
     width: 100%;
-    height: 100%;
+    height: 90%;
+    margin-top: 20%;
     background-color: #0E0E13;
     display: flex;
     flex-direction: column;
@@ -126,13 +127,14 @@ const Container = styled.div`
     > svg{
         position: absolute;
         font-size: 40px;
-        top: 30px;
+        top: 10px;
         left: 30px;
         color: #FFFFFF
 
     }
 
     img{
+        height: 14.2vh;
         margin-bottom: 12px;
     }
     

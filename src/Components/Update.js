@@ -87,6 +87,10 @@ const Container = styled.div`
         font-size: 40px;
     }
 
+    form{
+        margin-top: 80px;
+    }
+
     form input:nth-child(2){
         color: #7E7E7E;
         background-color: #ebebeb;

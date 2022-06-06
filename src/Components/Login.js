@@ -68,6 +68,11 @@ const Container = styled.div`
         color: #FFFFFF;
         text-align: center;
     }
+
+    button{
+        margin-top: 8px;
+        margin-bottom: 25px;
+    }
 `
 
 const IMG = styled.img`

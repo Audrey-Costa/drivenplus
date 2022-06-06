@@ -67,4 +67,9 @@ const Container = styled.div`
         text-decoration-line: underline;
         color: #FFFFFF;
     }
+
+    button{
+        margin-top: 8px;
+        margin-bottom: 25px;
+    }
 `

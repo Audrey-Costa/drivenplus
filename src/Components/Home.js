@@ -93,6 +93,12 @@ const Container = styled.div`
         padding-top: 60px;
         padding-bottom: 110px;
         overflow-y: scroll;
+        scrollbar-width: none;
+        -ms-overflow-style: none;
+    }
+
+    div:nth-child(4)::-webkit-scrollbar{
+        display: none;
     }
 
     div:nth-child(5){
