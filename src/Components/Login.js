@@ -8,7 +8,7 @@ import Input from "./Input"
 import Logo from "../Images/Driven+.png"
 
 export default function Login(){
-    const {user, setUser, setPlanData} = useContext(UserContext)
+    const {setUser, setPlanData} = useContext(UserContext)
     const [formData, setFormData] = useState({
         email: '',
         password: ''
@@ -40,8 +40,8 @@ export default function Login(){
         <Container>
             <IMG src={Logo} alt="Logo Driven Plus" />
             <form onSubmit={login}>
-                <Input formData={formData.email} inputName={"email"} inputChange={inputChange} placeholder={"E-mail"}/>
-                <Input formData={formData.password} inputName={"password"} inputChange={inputChange} placeholder={"Senha"}/>
+                <Input type={"text"} formData={formData.email} inputName={"email"} inputChange={inputChange} placeholder={"E-mail"}/>
+                <Input type={"password"} formData={formData.password} inputName={"password"} inputChange={inputChange} placeholder={"Senha"}/>
                 <Button type={'submit'}>ENTRAR</Button>
             </form>
             <Link style={{color: "#52B6FF"}} to={`/sign-up`}><h1>Não possui uma conta? Cadastre-se</h1></Link>
@@ -56,7 +56,7 @@ const Container = styled.div`
     align-items: center;
     width: 100%;
     height: 100%;
-    background: #000000;
+    background: #0E0E13;
 
     h1{
         font-family: 'Roboto';

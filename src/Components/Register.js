@@ -37,11 +37,11 @@ export default function Register(){
     return (
         <Container>
             <form onSubmit={register}>
-                <Input formData={formData.name} inputChange={inputChange} inputName={"name"} placeholder={"Nome"}/>
-                <Input formData={formData.cpf} inputChange={inputChange} inputName={"cpf"}  placeholder={"CPF"}/>
-                <Input formData={formData.email} inputChange={inputChange} inputName={"email"} placeholder={"E-mail"}/>
-                <Input formData={formData.password} inputChange={inputChange} inputName={"password"} placeholder={"Senha"}/>
-                <Button type={'submit'}>Cadastrar</Button>
+                <Input type={"text"} formData={formData.name} inputChange={inputChange} inputName={"name"} placeholder={"Nome"}/>
+                <Input type={"text"} formData={formData.cpf} inputChange={inputChange} inputName={"cpf"}  placeholder={"CPF"}/>
+                <Input type={"text"} formData={formData.email} inputChange={inputChange} inputName={"email"} placeholder={"E-mail"}/>
+                <Input type={"password"} formData={formData.password} inputChange={inputChange} inputName={"password"} placeholder={"Senha"}/>
+                <Button type={'submit'}>CADASTRAR</Button>
             </form> 
             <Link style={{textDecoration: "none", color: "#52B6FF"}} to={"/"}><h1>Já possui uma conta? Entre</h1></Link>
         </Container>
@@ -56,15 +56,15 @@ const Container = styled.div`
     align-items: center;
     width: 100%;
     height: 100vh;
-    background: #000000;
+    background: #0E0E13;
 
     h1{
         font-family: 'Roboto';
-    font-style: normal;
-    font-weight: 400;
-    font-size: 14px;
-    line-height: 16px;
-    text-decoration-line: underline;
-    color: #FFFFFF;
+        font-style: normal;
+        font-weight: 400;
+        font-size: 14px;
+        line-height: 16px;
+        text-decoration-line: underline;
+        color: #FFFFFF;
     }
 `

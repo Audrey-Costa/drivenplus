@@ -82,7 +82,7 @@ export default function Plan(){
                 <Modal style={modal ? {display: 'flex'} : {display: 'none'}}>
                     <FaWindowClose onClick={modalToggle}/>
                     <div>
-                        <p>Tem certeza que deseja assinar o plano {data.name} (R$ {data.price})?</p>
+                        <p>Tem certeza que deseja assinar o plano {data.name} (R$ {data.price.replace('.', ',')})?</p>
                         <div>
                             <Button onClick={modalToggle}>Não</Button>
                             <Button onClick={confirm}>Sim</Button>
@@ -99,14 +99,14 @@ export default function Plan(){
                 </div>
                 <div>
                     <h2><FaMoneyBillWave/> Preço:</h2>
-                    <h3>R$ ${data.price} cobrados mensalmente</h3>
+                    <h3>R$ ${data.price.replace('.', ',')} cobrados mensalmente</h3>
                 </div>
             </>}
             <form onSubmit={sign}>
-                <Input formData={formData.cardName} inputName={"cardName"} inputChange={inputChange} placeholder={"Nome impresso no cartão"}/>
-                <Input formData={formData.cardNumber} inputName={"cardNumber"} inputChange={inputChange} placeholder={"Digitos do cartão"}/>
-                <div><Input formData={formData.securityNumber} inputName={"securityNumber"} inputChange={inputChange} placeholder={"Código de segurança"}/>
-                <Input formData={formData.expirationDate} inputName={"expirationDate"} inputChange={inputChange} placeholder={"Código de segurança"}/></div>
+                <Input type={"text"} formData={formData.cardName} inputName={"cardName"} inputChange={inputChange} placeholder={"Nome impresso no cartão"}/>
+                <Input type={"text"} formData={formData.cardNumber} inputName={"cardNumber"} inputChange={inputChange} placeholder={"Digitos do cartão"}/>
+                <div><Input type={"text"} formData={formData.securityNumber} inputName={"securityNumber"} inputChange={inputChange} placeholder={"Código de segurança"}/>
+                <Input type={"text"} formData={formData.expirationDate} inputName={"expirationDate"} inputChange={inputChange} placeholder={"Código de segurança"}/></div>
                 <Button type={'submit'}>ASSINAR</Button>
             </form>
         </Container>
@@ -116,7 +116,7 @@ export default function Plan(){
 const Container = styled.div`
     width: 100%;
     height: 100%;
-    background-color: #000000;
+    background-color: #0E0E13;
     display: flex;
     flex-direction: column;
     justify-content: center;

@@ -5,7 +5,7 @@ export default function PlanOption({image, price}){
     return (
         <Container>
             <div><img src={image} alt="Driven+ Plan Logo" /></div>
-            <div><h1>R$ {price}</h1></div>
+            <div><h1>R$ {price.replace('.', ',')}</h1></div>
         </Container>
     )
 }

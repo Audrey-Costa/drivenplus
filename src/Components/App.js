@@ -24,7 +24,7 @@ export default function App(){
                 <Route path="/subscriptions/:ID_DO_PLANO" element={<Plan/>}/>
                 <Route path="/home" element={<Home/>}/>
                 <Route path="/users/:ID_DO_USUARIO" element={<Users/>}/>
-                <Route path="/users/:ID_DO_USUARIO/:update" element={<Update/>}/>
+                <Route path="/users/:ID_DO_USUARIO/update" element={<Update/>}/>
             </Routes>
         </BrowserRouter>
     </UserContext.Provider>)

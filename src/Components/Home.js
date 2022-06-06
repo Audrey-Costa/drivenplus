@@ -1,6 +1,6 @@
 import axios from 'axios'
-import { useState, useContext } from 'react'
-import { useNavigate } from 'react-router-dom'
+import { useContext } from 'react'
+import { useNavigate, Link } from 'react-router-dom'
 import styled from 'styled-components'
 import UserContext from '../Context/UserContext'
 import Button from './Button'
@@ -10,7 +10,7 @@ import {FaUserCircle} from 'react-icons/fa'
 export default function Home(){
     const navigate = useNavigate();
     const {user, planData} = useContext(UserContext);
-
+    console.log(user)
     function changePlan(){
         navigate('/subscriptions')
     }
@@ -27,7 +27,7 @@ export default function Home(){
     return (
         <Container>
             <img src={planData.image} alt="Logo do Plano" />
-            <FaUserCircle/>
+            <Link style={{textDecoration: "none"}} to={`/users/${user.id}`}><FaUserCircle/></Link>
             <h1>Olá, {user.name}</h1>
             {planData.perks.map((element, index) => <a key={index} href={element.link} target="_blank"><Button>{element.title}</Button></a>)}
             <div>
@@ -46,6 +46,7 @@ const Container = styled.div`
     flex-direction: column;
     justify-content: flex-start;
     align-items: center;
+    background-color: #0E0E13;
 
     img{
         position: absolute;
