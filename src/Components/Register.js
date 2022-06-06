@@ -24,7 +24,7 @@ export default function Register(){
         promise.then(response => navigate('/'));
         promise.catch(error => {
             if(error.response.status === 409){
-                alert("E-mail já cadastrado!")
+                alert("Usuário já cadastrado!")
             }
         })
     }
