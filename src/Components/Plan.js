@@ -8,6 +8,7 @@ import Button from './Button'
 import {FiArrowLeft} from 'react-icons/fi'
 import {FaMoneyBillWave, FaWindowClose} from 'react-icons/fa'
 import {HiOutlineClipboardList} from 'react-icons/hi'
+import { Triangle } from  'react-loader-spinner'
 
 export default function Plan(){
     const navigate = useNavigate();
@@ -77,7 +78,7 @@ export default function Plan(){
     return (
         <Container>
             <FiArrowLeft onClick={back}/>
-            {data === "" ? "oi galera aqui quem fala é luan gameplays" : 
+            {data === "" ? <Triangle color="#FF4791" height={200} width={200} margin-left={300}/> : 
             <>
                 <Modal style={modal ? {display: 'flex'} : {display: 'none'}}>
                     <FaWindowClose onClick={modalToggle}/>
@@ -134,9 +135,9 @@ const Container = styled.div`
     img{
         margin-bottom: 12px;
     }
-
+    
     > div{
-        width: 300px;
+        width: 80vw;
         margin-bottom: 12px;
         display: flex;
         flex-direction: column;
@@ -144,9 +145,11 @@ const Container = styled.div`
         align-items: flex-start;
     }
 
-    > div svg{
+    > div:nth-child(2){
+        align-items: center;
         color: #FF4791;
     }
+
 
     h1{
         font-family: 'Roboto';
@@ -192,8 +195,8 @@ const Container = styled.div`
         }
 
         div > input{
-            width: 140px;
-            margin: 5px;
+            width: 37vw;
+            margin: 1.4vw;
         }
     }
 `
@@ -217,8 +220,8 @@ const Modal = styled.span`
     }
 
     > div{
-        width: 250px;
-        height: 210px;
+        width: 66vw;
+        height: 31vh;
         background-color: #FFFFFF;
         border-radius: 12px;
         display: flex;
@@ -228,7 +231,7 @@ const Modal = styled.span`
     }
 
     p{
-        margin-top: 20px;
+        margin-top: 3vh;
         font-family: 'Roboto';
         font-style: normal;
         font-weight: 700;
@@ -242,12 +245,12 @@ const Modal = styled.span`
         display: flex;
         justify-content: space-between;
         align-items: center;
-        margin-top: 50px;
+        margin-top: 3.8vh;
     }
 
     button{
-        width: 95px;
-        height: 52px;
+        width: 25vw;
+        height: 7.8vh;
         margin: 10px 7px;
         border-radius: 8px;
     }

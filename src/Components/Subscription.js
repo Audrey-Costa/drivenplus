@@ -4,6 +4,7 @@ import styled from 'styled-components'
 import PlanOption from './PlanOption';
 import axios from "axios"
 import UserContext from "../Context/UserContext"
+import { Triangle } from  'react-loader-spinner'
 
 export default function Subscription(){
     const {user} = useContext(UserContext)
@@ -24,7 +25,7 @@ export default function Subscription(){
     return (
         <Container>
             <h1>Escolha seu Plano</h1>
-            {data !== "" ? data.map((element, index) => <Link key={index} style={{textDecoration: "none"}} to={`/subscriptions/${element.id}`}><PlanOption key={index} image={element.image} price={element.price}/></Link>): "oi galera aqui quem fala é luan gameplays"}
+            {data !== "" ? data.map((element, index) => <Link key={index} style={{textDecoration: "none"}} to={`/subscriptions/${element.id}`}><PlanOption key={index} image={element.image} price={element.price}/></Link>) : <Triangle color="#FF4791" height={200} width={200} />}
         </Container>
     )
 }

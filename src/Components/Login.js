@@ -60,16 +60,18 @@ const Container = styled.div`
 
     h1{
         font-family: 'Roboto';
-    font-style: normal;
-    font-weight: 400;
-    font-size: 14px;
-    line-height: 16px;
-    text-decoration-line: underline;
-    color: #FFFFFF;
+        font-style: normal;
+        font-weight: 400;
+        font-size: 14px;
+        line-height: 16px;
+        text-decoration-line: underline;
+        color: #FFFFFF;
+        text-align: center;
     }
 `
 
 const IMG = styled.img`
+    width: 60vw;
     margin-top: 68px;
     margin-bottom: 32px;
 `

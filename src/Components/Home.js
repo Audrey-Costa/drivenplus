@@ -10,7 +10,7 @@ import {FaUserCircle} from 'react-icons/fa'
 export default function Home(){
     const navigate = useNavigate();
     const {user, planData} = useContext(UserContext);
-    console.log(user)
+    
     function changePlan(){
         navigate('/subscriptions')
     }
@@ -29,7 +29,9 @@ export default function Home(){
             <img src={planData.image} alt="Logo do Plano" />
             <Link style={{textDecoration: "none"}} to={`/users/${user.id}`}><FaUserCircle/></Link>
             <h1>Olá, {user.name}</h1>
-            {planData.perks.map((element, index) => <a key={index} href={element.link} target="_blank"><Button>{element.title}</Button></a>)}
+            <div>
+                {planData.perks.map((element, index) => <a key={index} href={element.link} target="_blank"><Button>{element.title}</Button></a>)}
+            </div>
             <div>
                 <Button onClick={changePlan}>Mudar plano</Button>
                 <Button onClick={cancelPlan}>Cancelar plano</Button>
@@ -60,13 +62,13 @@ const Container = styled.div`
     svg{
         font-size: 35px;
         position: absolute;
-        top: 30px;
+        top: 40px;
         right: 30px;
         color: #FFFFFF;
     }
 
     h1{
-        margin-bottom: 50px;
+        margin-bottom: 7.5vw;
         font-family: 'Roboto';
         font-style: normal;
         font-weight: 700;
@@ -81,16 +83,26 @@ const Container = styled.div`
     }
 
     div{
-        position: absolute;
-        bottom: 10px;
         display: flex;
         flex-direction: column;
         justify-content: center;
         align-items: center;
-
-        button{
-            margin: 4px;
-        }
     }
 
+    div:nth-child(4){
+        padding-top: 60px;
+        padding-bottom: 110px;
+        overflow-y: scroll;
+    }
+
+    div:nth-child(5){
+        position: absolute;
+        z-index: 1;
+        background-color: #0E0E13;
+        bottom: 10px;
+    }
+
+    button{
+            margin: 4px;
+        }
 `

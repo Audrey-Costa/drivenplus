@@ -5,7 +5,7 @@ export default function Input({type, formData, inputChange, inputName, placehold
 }
 
 const INPUT = styled.input`
-    width: 300px;
+    width: 80vw;
     height: 50px;
     margin-bottom: 16px;
     background: #FFFFFF;
