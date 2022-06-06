@@ -16,7 +16,7 @@ export default function Home(){
     }
     
     function cancelPlan(){
-        const promise = axios.delete('https://mock-api.driven.com.br/api/v4/driven-plus/subscriptions', {
+        axios.delete('https://mock-api.driven.com.br/api/v4/driven-plus/subscriptions', {
             headers: {
                 Authorization: `Bearer ${user.token}`
             }
@@ -30,7 +30,7 @@ export default function Home(){
             <Link style={{textDecoration: "none"}} to={`/users/${user.id}`}><FaUserCircle/></Link>
             <h1>Olá, {user.name}</h1>
             <div>
-                {planData.perks.map((element, index) => <a key={index} href={element.link} target="_blank"><Button>{element.title}</Button></a>)}
+                {planData.perks.map((element, index) => <a key={index} href={element.link} target="_blank" rel="noreferrer"><Button>{element.title}</Button></a>)}
             </div>
             <div>
                 <Button onClick={changePlan}>Mudar plano</Button>
@@ -41,9 +41,9 @@ export default function Home(){
 }
 
 const Container = styled.div`
-    width: 90%;
-    height: 80%;
-    margin-top: 15%;
+    width: 100%;
+    height: calc(100% - 90px);
+    margin-top: 90px;
     display: flex;
     flex-direction: column;
     justify-content: flex-start;
@@ -77,11 +77,6 @@ const Container = styled.div`
         color: #FFFFFF;
     }
 
-    > a{
-        height: 50px;
-        margin-bottom: 8px;
-    }
-
     div{
         display: flex;
         flex-direction: column;
@@ -92,13 +87,6 @@ const Container = styled.div`
     div:nth-child(4){
         padding-top: 60px;
         padding-bottom: 110px;
-        overflow-y: scroll;
-        scrollbar-width: none;
-        -ms-overflow-style: none;
-    }
-
-    div:nth-child(4)::-webkit-scrollbar{
-        display: none;
     }
 
     div:nth-child(5){
@@ -111,4 +99,8 @@ const Container = styled.div`
     button{
             margin: 4px;
         }
+    
+    div:last-child button:last-child{
+        background-color: #FF4747;
+    }
 `

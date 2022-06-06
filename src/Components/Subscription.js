@@ -21,7 +21,7 @@ export default function Subscription(){
             setData(response.data);
         
         })
-    },[]);
+    },[user.token]);
     return (
         <Container>
             <h1>Escolha seu Plano</h1>

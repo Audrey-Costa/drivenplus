@@ -36,7 +36,7 @@ const Container = styled.div`
         font-family: 'Roboto';
         font-style: normal;
         font-weight: 700;
-        font-size: 14px;
+        font-size: 24px;
         line-height: 28px;
         color: #FFFFFF;
     }

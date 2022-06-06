@@ -36,7 +36,7 @@ export default function Plan(){
             promise.then(response => {
                 setData(response.data);
             })
-            },[])
+            },[ID_DO_PLANO, user.token])
 
     function modalToggle(){
         setModal(!modal)
@@ -93,13 +93,13 @@ export default function Plan(){
                 <img src={data.image} alt="Logo do plano" />
                 <h1>{data.name}</h1>
                 <div>
-                    <h2><HiOutlineClipboardList/> Benefícios:</h2>
+                    <h2><HiOutlineClipboardList style={{color: "#FF4791"}}/> Benefícios:</h2>
                     <ol>
                         {data.perks.map((element, indice)=><li key={indice}><h3>{indice + 1}. {element.title}</h3></li>)}
                     </ol>
                 </div>
                 <div>
-                    <h2><FaMoneyBillWave/> Preço:</h2>
+                    <h2><FaMoneyBillWave style={{color: "#FF4791"}}/> Preço:</h2>
                     <h3>R$ ${data.price.replace('.', ',')} cobrados mensalmente</h3>
                 </div>
             </>}
@@ -133,7 +133,7 @@ const Container = styled.div`
     }
 
     img{
-        height: 55px;
+        height: 100px;
         margin-bottom: 12px;
     }
     
@@ -197,7 +197,7 @@ const Container = styled.div`
 
         div > input{
             width: 140px;
-            margin: 5px;
+            margin: 0px 2.5px 15px 2.5px;
         }
     }
 `
