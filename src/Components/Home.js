@@ -105,7 +105,7 @@ const Container = styled.div`
         position: absolute;
         z-index: 1;
         background-color: #0E0E13;
-        bottom: 10px;
+        bottom: 0px;
     }
 
     button{
